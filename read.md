@@ -1,4 +1,4 @@
-# VozParaVer
+# Visou
 
 Sistema de audiodescrição automática de imagens para acessibilidade visual.
 Projeto final da disciplina de Sistemas Multimídia (CIT7596) — UFSC Araranguá, 2026.1.
@@ -111,6 +111,6 @@ vozparaver/
 
 ---
 
-**Autor:** [seu nome]
+**Autor:** Tiago Ghellere Dells
 **Disciplina:** Sistemas Multimídia (CIT7596)
 **Professora:** Marina Carradore Sérgio
