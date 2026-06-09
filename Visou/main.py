@@ -3,8 +3,6 @@ import subprocess
 from descriptor import descripting
 from translator import translate
 from speaker import speak
-from playsound import playsound
-
 
 def main(img_path):
     print("Descrevendo imagem...")
@@ -21,9 +19,8 @@ def main(img_path):
 
     print("Reproduzindo...")
     #MacOS
-    subprocess.run("afplay", output_path)
-    #Windows
-    playsound(output_path)
+    subprocess.run(["afplay", output_path])
+
 
 if __name__ == "__main__":
     main(sys.argv[1])

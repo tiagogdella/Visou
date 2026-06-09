@@ -7,5 +7,5 @@ model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-capt
 def descripting(img_path):
     img = Image.open(img_path).convert("RGB")
     inputs = processor(img, return_tensors="pt")
-    output = model.generate(**inputs)
+    output = model.generate(**inputs, max_new_tokens=50, repetition_penalty=1.5)
     return processor.decode(output[0], skip_special_tokens=True)
