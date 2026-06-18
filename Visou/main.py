@@ -1,6 +1,7 @@
 import sys
 # acessa inf. do sistema: pegar img passada no terminal
 import subprocess
+import os
 #permite rodar outros prog. do SO dentro do python
 from descriptor import descripting
 from translator import translate
@@ -15,6 +16,8 @@ def main(img_path):
     translation = translate(description)
     print(f"Tradução (PT-BR): {translation}")
 
+    os.makedirs("outputs", exist_ok=True)
+    #cria a pasta "outputs" caso não exista
     output_path = "outputs/descricao.mp3"
     print("Gerando áudio...")
     speak(translation, output_path)
@@ -32,5 +35,5 @@ if __name__ == "__main__":
     #ou seja só roda se importar o arquivo completo
     main(sys.argv[1])
     #pega o primeiro arg. passado no terminal
-    #roda assim: python3 main.py (arquivo)
+    #roda assim: python main.py (arquivo)
           
